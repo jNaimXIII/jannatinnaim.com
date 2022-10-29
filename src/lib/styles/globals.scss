@@ -1,1 +1,8 @@
 @import "./resets.scss";
+
+#app > main > section {
+  scroll-snap-align: start;
+
+  height: 100%;
+  border-radius: 8px;
+}

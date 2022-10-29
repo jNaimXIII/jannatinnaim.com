@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { theme } from "$lib/stores";
+
   import About from "./_About.svelte";
   import Hero from "./_Hero.svelte";
   import Showcase from "./_Showcase.svelte";
@@ -10,21 +12,38 @@
   <title>Jannatin Naim</title>
 </svelte:head>
 
-<Hero />
+<main class={[$theme].join(" ")}>
+  <Hero />
 
-<About />
+  <About />
 
-<Works />
+  <Works />
 
-<Showcase />
+  <Showcase />
 
-<Signature />
+  <Signature />
+</main>
 
 <style lang="scss">
-  :global(#app > main > section) {
-    scroll-snap-align: start;
-
-    height: 100%;
+  main {
+    grid-row: 2/3;
+    grid-column: 1/2;
     border-radius: 8px;
+    overflow: scroll;
+
+    scroll-snap-type: y mandatory;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    box-shadow: $layout-box-shadow;
+
+    @media (max-width: 425px) {
+      grid-column: 1/2;
+      grid-row: 2/3;
+    }
   }
 </style>

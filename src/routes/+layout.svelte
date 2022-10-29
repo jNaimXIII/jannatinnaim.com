@@ -1,18 +1,33 @@
 <script lang="ts">
   import "$lib/styles/globals.scss";
+
+  import Menu from "$lib/components/menu/_Menu.svelte";
   import Dock from "$lib/components/_Dock.svelte";
-  import Menu from "$lib/components/_Menu.svelte";
-  import { theme } from "$lib/stores";
+
+  let isMobileNavigationToggled: boolean;
+  let appElement: HTMLDivElement;
+  const handleMobileNavigationClick = () => {
+    console.log("i toggled");
+    if (isMobileNavigationToggled) {
+      appElement.style.gridTemplateColumns = "auto 0px";
+      appElement.style.gridTemplateRows = "auto 0px";
+    } else {
+      appElement.style.gridTemplateColumns = "auto 64px";
+      appElement.style.gridTemplateRows = "32px auto";
+    }
+  };
 </script>
 
-<div id="app">
-  <Menu />
+<svelte:head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap" rel="stylesheet" />
+</svelte:head>
 
+<div id="app" bind:this={appElement}>
+  <Menu on:mobileNavigationClick={handleMobileNavigationClick} bind:isMobileNavigationToggled />
   <Dock />
-
-  <main class={[$theme].join(" ")}>
-    <slot />
-  </main>
+  <slot />
 </div>
 
 <style lang="scss">
@@ -27,19 +42,9 @@
     grid-template-columns: auto 64px;
     grid-template-rows: 32px auto;
 
-    main {
-      grid-row: 2/3;
-      grid-column: 1/2;
-      border-radius: 8px;
-      overflow: scroll;
-
-      scroll-snap-type: y mandatory;
-
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-      &::-webkit-scrollbar {
-        display: none;
-      }
+    @media (max-width: 425px) {
+      grid-template-columns: auto;
+      grid-template-rows: 32px auto 64px;
     }
   }
 </style>
