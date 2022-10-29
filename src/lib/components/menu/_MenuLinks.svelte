@@ -39,8 +39,8 @@
   </button>
 
   <div class="site-links">
-    <a href="/blog">Blog</a>
-    <a href="/showcase">Showcase</a>
+    <a href="/">Blog</a>
+    <a href="/">Showcase</a>
   </div>
 
   <div class="social-links">
