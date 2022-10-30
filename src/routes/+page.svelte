@@ -59,6 +59,18 @@
 
 <style lang="scss">
   #home {
+    @keyframes fade-in-blur {
+      from {
+        filter: blur(1rem);
+      }
+
+      to {
+        filter: none;
+      }
+    }
+    animation: fade-in-blur 0.7s ease-out;
+    animation-fill-mode: forwards;
+
     position: relative;
     height: 100vh;
     width: 100vw;

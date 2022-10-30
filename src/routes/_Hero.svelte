@@ -44,10 +44,31 @@
       text-align: center;
 
       h1 {
+        @keyframes slide-down {
+          from {
+            transform: translateY(-2rem);
+          }
+          to {
+            transform: translateY(0);
+          }
+        }
+
+        animation: slide-down 0.7s ease-out;
+
         font-size: 5rem;
       }
 
       div {
+        @keyframes slide-up {
+          from {
+            transform: translateY(2rem);
+          }
+          to {
+            transform: translateY(0);
+          }
+        }
+        animation: slide-up 1s ease-out;
+
         display: flex;
         flex-direction: column;
         align-items: center;
