@@ -1,5 +1,6 @@
 <script lang="ts">
   import Icon from "@iconify/svelte";
+  import { theme } from "$lib/stores";
   import { createEventDispatcher, onMount } from "svelte";
 
   const dispatch = createEventDispatcher();
@@ -29,7 +30,7 @@
   });
 </script>
 
-<nav class="links" class:mobile-navigation-toggled={isMobileNavigationToggled}>
+<nav class={["links", $theme].join(" ")} class:mobile-navigation-toggled={isMobileNavigationToggled}>
   <button class="mobile-navigation-toggle" on:click={handleMobileNavigationClick}>
     {#if isMobileNavigationToggled}
       <Icon icon="fa6-solid:xmark" />
@@ -71,6 +72,11 @@
 
       a {
         color: $primary-font-color;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+          transform: scale(1.12);
+        }
       }
     }
 
@@ -101,6 +107,7 @@
       background: none;
 
       font-size: 1.2rem;
+      color: $primary-font-color;
     }
 
     @media (max-width: 425px) {
@@ -133,6 +140,19 @@
 
       .social-links {
         gap: 2rem;
+      }
+    }
+
+    &.dark {
+      .mobile-navigation-toggle {
+        color: $primary-font-color-dark;
+      }
+
+      .site-links,
+      .social-links {
+        a {
+          color: $primary-font-color-dark;
+        }
       }
     }
   }

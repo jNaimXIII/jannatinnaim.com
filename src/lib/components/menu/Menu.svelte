@@ -1,10 +1,11 @@
 <script lang="ts">
-  import MenuLinks from "./_MenuLinks.svelte";
+  import { theme } from "$lib/stores";
+  import MenuLinks from "./MenuLinks.svelte";
 
   export let isMobileNavigationToggled: boolean;
 </script>
 
-<header class:mobile-navigation-toggled={isMobileNavigationToggled}>
+<header class:mobile-navigation-toggled={isMobileNavigationToggled} class={$theme}>
   <div class="branding">
     <a href="/" title="Jannatin Naim">Jannatin Naim</a>
   </div>
@@ -50,6 +51,16 @@
     @media (max-width: 425px) {
       grid-column: 1/2;
       grid-row: 1/2;
+    }
+
+    &.dark {
+      box-shadow: $layout-box-shadow-dark;
+
+      .branding {
+        a {
+          color: $primary-font-color-dark;
+        }
+      }
     }
   }
 </style>

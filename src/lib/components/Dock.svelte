@@ -1,7 +1,8 @@
 <script lang="ts">
+  import { theme } from "$lib/stores";
 </script>
 
-<nav />
+<nav class={$theme} />
 
 <style lang="scss">
   nav {
@@ -14,6 +15,10 @@
     @media (max-width: 425px) {
       grid-column: 1/2;
       grid-row: 3/4;
+    }
+
+    &.dark {
+      box-shadow: $layout-box-shadow-dark;
     }
   }
 </style>
