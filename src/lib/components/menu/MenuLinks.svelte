@@ -14,7 +14,7 @@
   onMount(() => {
     const isMobileScreenListener = () => {
       const mobileWidth = 425;
-      const isMobileScreen = screen.width <= mobileWidth;
+      const isMobileScreen = window.innerWidth <= mobileWidth;
 
       if (!isMobileScreen && isMobileNavigationToggled) {
         isMobileNavigationToggled = false;

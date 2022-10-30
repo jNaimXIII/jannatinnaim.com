@@ -46,6 +46,11 @@
       flex-direction: column;
       justify-content: center;
       gap: 2rem;
+      grid-row: 1/4;
+
+      position: relative;
+      z-index: 999;
+      background: #eee;
     }
 
     @media (max-width: 425px) {
@@ -55,6 +60,10 @@
 
     &.dark {
       box-shadow: $layout-box-shadow-dark;
+
+      &.mobile-navigation-toggled {
+        background: #333;
+      }
 
       .branding {
         a {

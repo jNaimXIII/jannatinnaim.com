@@ -10,29 +10,16 @@
   import Showcase from "./_Showcase.svelte";
   import Signature from "./_Signature.svelte";
   import Works from "./_Works.svelte";
-  import { onMount } from "svelte";
 
   let isMobileNavigationToggled: boolean;
   let appElement: HTMLDivElement;
   const handleMobileNavigationClick = () => {
-    const isMobileScreen = window.innerWidth <= 425;
-
     if (isMobileNavigationToggled) {
-      if (isMobileScreen) {
-        appElement.style.gridTemplateColumns = "auto";
-        appElement.style.gridTemplateRows = "auto 0px 0px";
-      } else {
-        appElement.style.gridTemplateColumns = "auto 0px";
-        appElement.style.gridTemplateRows = "auto 0px";
-      }
+      appElement.classList.remove("not-mobile-navigation-toggled");
+      appElement.classList.add("mobile-navigation-toggled");
     } else {
-      if (isMobileScreen) {
-        appElement.style.gridTemplateColumns = "auto";
-        appElement.style.gridTemplateRows = "32px auto 64px";
-      } else {
-        appElement.style.gridTemplateColumns = "auto 64px";
-        appElement.style.gridTemplateRows = "32px auto";
-      }
+      appElement.classList.add("not-mobile-navigation-toggled");
+      appElement.classList.remove("mobile-navigation-toggled");
     }
   };
 </script>
@@ -142,6 +129,20 @@
           }
         }
       }
+    }
+  }
+
+  .mobile-navigation-toggled {
+    @media (max-width: 425px) {
+      grid-template-columns: auto;
+      grid-template-rows: auto 0px 0px;
+    }
+  }
+
+  .not-mobile-navigation-toggled {
+    @media (max-width: 425px) {
+      grid-template-columns: auto;
+      grid-template-rows: 32px auto 64px;
     }
   }
 </style>

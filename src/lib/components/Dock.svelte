@@ -6,10 +6,10 @@
 <nav class={$theme}>
   <div class="links">
     <a href="#hero" title="Home">
-      <Icon icon="bi:house" width="100%" />
+      <Icon icon="bi:house" width="100%" class="link-icon" />
     </a>
     <a href="#about" title="About">
-      <Icon icon="ant-design:info-circle-outlined" width="100%" />
+      <Icon icon="ant-design:info-circle-outlined" width="100%" class="link-icon" />
     </a>
   </div>
 </nav>
@@ -37,6 +37,8 @@
       flex-direction: column;
       align-items: center;
       gap: 1rem;
+
+      overflow: hidden;
 
       a {
         color: $primary-font-color;
