@@ -10,6 +10,7 @@
   import Showcase from "./_Showcase.svelte";
   import Signature from "./_Signature.svelte";
   import Works from "./_Works.svelte";
+  import { onMount } from "svelte";
 
   let isMobileNavigationToggled: boolean;
   let appElement: HTMLDivElement;
@@ -40,7 +41,7 @@
   <title>Jannatin Naim</title>
 </svelte:head>
 
-<div id="app" bind:this={appElement} class={$theme}>
+<div id="home" bind:this={appElement} class={$theme}>
   <Menu on:mobileNavigationClick={handleMobileNavigationClick} bind:isMobileNavigationToggled />
 
   <main>
@@ -57,7 +58,7 @@
 </div>
 
 <style lang="scss">
-  #app {
+  #home {
     position: relative;
     height: 100vh;
     width: 100vw;
@@ -67,6 +68,8 @@
     padding: 8px;
     grid-template-columns: auto 64px;
     grid-template-rows: 32px auto;
+
+    background: #eee;
 
     transition: background 0.4s ease-out;
 
@@ -83,25 +86,28 @@
       border-radius: 8px;
       overflow-y: scroll;
 
+      scroll-behavior: smooth;
       scroll-snap-type: y mandatory;
 
-      scrollbar-width: thin;
-      // scrollbar-width: none;
-      &::-webkit-scrollbar {
-        // display: none;
-        width: 10px;
-      }
+      box-shadow: $layout-box-shadow;
 
-      scrollbar-color: #ccc white;
-      &::-webkit-scrollbar-thumb {
-        background: #ccc;
+      @media (min-width: 426px) {
+        scrollbar-width: thin;
+        // scrollbar-width: none;
+        &::-webkit-scrollbar {
+          // display: none;
+          width: 10px;
+        }
 
-        &:hover {
-          background: #bbb;
+        scrollbar-color: #ccc white;
+        &::-webkit-scrollbar-thumb {
+          background: #ccc;
+
+          &:hover {
+            background: #bbb;
+          }
         }
       }
-
-      box-shadow: $layout-box-shadow;
 
       @media (max-width: 425px) {
         grid-column: 1/2;
