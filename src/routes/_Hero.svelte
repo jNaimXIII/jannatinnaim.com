@@ -77,8 +77,6 @@
         p {
           font-size: 1.2rem;
           opacity: 0.69;
-          display: flex;
-          align-items: center;
           gap: 0.2rem;
 
           a {

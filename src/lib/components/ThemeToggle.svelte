@@ -43,7 +43,7 @@
   .toggle-theme {
     position: fixed;
     bottom: 16px;
-    right: 98px;
+    right: 88px;
 
     display: flex;
     align-items: center;

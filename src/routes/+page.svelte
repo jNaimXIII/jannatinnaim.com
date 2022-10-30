@@ -79,6 +79,9 @@
 
     main {
       position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 8rem;
 
       grid-row: 2/3;
       grid-column: 1/2;
@@ -111,6 +114,9 @@
       @media (max-width: 425px) {
         grid-column: 1/2;
         grid-row: 2/3;
+
+        gap: 12rem;
+        scroll-snap-type: y proximity;
       }
     }
 
