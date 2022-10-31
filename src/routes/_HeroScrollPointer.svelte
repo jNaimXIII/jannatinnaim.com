@@ -8,16 +8,6 @@
 </a>
 
 <style lang="scss">
-  @keyframes bounce-up-and-down {
-    from,
-    to {
-      transform: translate(-50%, 0);
-    }
-    50% {
-      transform: translate(-50%, -50%);
-    }
-  }
-
   a {
     position: absolute;
     bottom: 4rem;
@@ -27,8 +17,6 @@
     width: 4rem;
 
     color: $primary-font-color;
-
-    animation: bounce-up-and-down 2s ease-in-out infinite;
 
     @media (max-width: 425px) {
       width: 3rem;

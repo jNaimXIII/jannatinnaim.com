@@ -13,16 +13,6 @@
     left: 0;
     width: 220px;
 
-    @keyframes slide-up {
-      from {
-        transform: translateY(100%);
-      }
-      to {
-        transform: translateY(0);
-      }
-    }
-    animation: slide-up 2s;
-
     img {
       width: 100%;
       display: block;

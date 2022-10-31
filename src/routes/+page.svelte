@@ -1,5 +1,6 @@
 <script lang="ts">
   import { theme } from "$lib/stores";
+  import { onMount } from "svelte";
 
   import Menu from "$lib/components/menu/Menu.svelte";
   import Dock from "$lib/components/Dock.svelte";
@@ -22,6 +23,15 @@
       appElement.classList.remove("mobile-navigation-toggled");
     }
   };
+
+  onMount(() => {
+    const sectionLink = window.location.hash;
+
+    if (sectionLink) {
+      const section = appElement.querySelector(sectionLink);
+      section?.scrollIntoView();
+    }
+  });
 </script>
 
 <svelte:head>
@@ -46,18 +56,6 @@
 
 <style lang="scss">
   #home {
-    @keyframes fade-in-blur {
-      from {
-        filter: blur(1rem);
-      }
-
-      to {
-        filter: none;
-      }
-    }
-    animation: fade-in-blur 0.7s ease-out;
-    animation-fill-mode: forwards;
-
     position: relative;
     height: 100vh;
     width: 100vw;
