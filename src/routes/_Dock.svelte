@@ -4,10 +4,10 @@
 <div class="dock-container">
   <div class="dock">
     <nav>
-      <a href="/">
+      <a href="#home">
         <iconify-icon icon="akar-icons:home-alt1" height="36px" />
       </a>
-      <a href="/">
+      <a href="#about">
         <iconify-icon icon="akar-icons:info" height="36px" />
       </a>
       <a href="/">

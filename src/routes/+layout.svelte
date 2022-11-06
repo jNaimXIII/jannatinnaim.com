@@ -15,4 +15,7 @@
 <slot />
 
 <style lang="scss">
+  :global(html) {
+    scroll-behavior: smooth;
+  }
 </style>

@@ -2,11 +2,13 @@
   import "$lib/styles/home/section.scss";
 </script>
 
-<section class="hero">
+<section class="hero" id="home">
   <h1 data-role="greeting">Heyo! How's it going?</h1>
   <p>I'm <strong>Jannatin Naim</strong> and I do a lot of things so... keep scrolling to find out.</p>
 
-  <iconify-icon icon="akar-icons:chevron-down" height="64px" />
+  <a href="#about">
+    <iconify-icon icon="akar-icons:chevron-down" height="64px" />
+  </a>
 </section>
 
 <style lang="scss">
@@ -29,11 +31,13 @@
       font-size: 64px;
     }
 
-    iconify-icon {
+    a {
       position: absolute;
       bottom: 32px;
       left: 50%;
       transform: translateX(-50%);
+
+      color: $primary-font-color;
     }
   }
 </style>

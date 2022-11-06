@@ -2,7 +2,7 @@
   import Menu from "./_Menu.svelte";
   import Dock from "./_Dock.svelte";
 
-  import Hero from "./_Hero.svelte";
+  import Home from "./_Home.svelte";
   import About from "./_About.svelte";
 </script>
 
@@ -10,7 +10,7 @@
 <Dock />
 
 <main>
-  <Hero />
+  <Home />
   <About />
 </main>
 
