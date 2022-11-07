@@ -1,7 +1,3 @@
-<script lang="ts">
-  import ProfileImage from "$lib/assets/images/profile.png";
-</script>
-
 <section class="about" id="about">
   <h2>Who am I?</h2>
 
@@ -18,7 +14,7 @@
     <p>For now, just keep scrolling.</p>
   </div>
 
-  <img src={ProfileImage} alt="Jannatin Naim's profile" />
+  <img src="/images/profile.png" alt="Jannatin Naim's profile" />
 </section>
 
 <style lang="scss">

@@ -17,5 +17,11 @@
 <style lang="scss">
   :global(html) {
     scroll-behavior: smooth;
+
+    scroll-snap-type: y proximity;
+
+    @media (min-width: 1024px) {
+      scroll-snap-type: y mandatory;
+    }
   }
 </style>

@@ -10,7 +10,7 @@
       <a href="#about">
         <iconify-icon icon="akar-icons:info" height="36px" />
       </a>
-      <a href="/">
+      <a href="#discovery">
         <iconify-icon icon="akar-icons:search" height="36px" />
       </a>
     </nav>
@@ -22,7 +22,7 @@
     position: fixed;
     top: 0;
     right: 0;
-    z-index: 10;
+    z-index: 9;
 
     height: 100vh;
     padding: 8px;

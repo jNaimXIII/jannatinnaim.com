@@ -1,6 +1,8 @@
 section {
   min-height: calc(100vh - 52px - 8px);
 
+  scroll-snap-align: start;
+
   &:not(:last-child) {
     margin-bottom: 52px !important;
   }

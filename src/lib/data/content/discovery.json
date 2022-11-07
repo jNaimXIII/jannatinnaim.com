@@ -1,0 +1,40 @@
+{
+  "showcase": [
+    {
+      "name": "Something I did I suppose.",
+      "description": "A bit more into the things that I did. Although I don't really have anything to say in this regard.",
+      "background": "/images/content/discovery/3477644.jpg",
+      "url": "/"
+    },
+    {
+      "name": "BOOM!",
+      "description": "Why is this boom? IDK. How am I supposed to know?",
+      "background": "/images/content/discovery/5149701.jpg",
+      "url": "/"
+    },
+    {
+      "name": "Check this out!",
+      "description": "I don't know what I'm asking you to look at tbh.",
+      "background": "/images/content/discovery/6057231.jpg",
+      "url": "/"
+    },
+    {
+      "name": "Cool project?",
+      "description": "Last time I checked, I didn't have any cool projects that I did.",
+      "background": "/images/content/discovery/6114887.jpg",
+      "url": "/"
+    },
+    {
+      "name": "Hmmm....",
+      "description": "Hmmm.... indeed. Why are you even here?",
+      "background": "/images/content/discovery/6592753.jpg",
+      "url": "/"
+    },
+    {
+      "name": "AGHHHH!",
+      "description": "I've had enough of this.",
+      "background": "/images/content/discovery/9574432.jpg",
+      "url": "/"
+    }
+  ]
+}

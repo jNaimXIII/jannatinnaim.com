@@ -4,6 +4,7 @@
 
   import Home from "./_Home.svelte";
   import About from "./_About.svelte";
+  import Discovery from "./_Discovery.svelte";
 </script>
 
 <Menu />
@@ -12,6 +13,7 @@
 <main>
   <Home />
   <About />
+  <Discovery />
 </main>
 
 <style lang="scss">

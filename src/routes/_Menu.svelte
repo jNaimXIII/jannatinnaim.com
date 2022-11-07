@@ -1,17 +1,19 @@
-<script lang="ts">
-  import FavIcon from "$lib/assets/images/favicon.png";
-</script>
-
 <div class="menu-container">
   <div class="menu">
     <div class="branding">
-      <img src={FavIcon} alt="Jannatin Naim's favicon" />
+      <img src="/favicon.png" alt="Jannatin Naim's favicon" />
     </div>
 
     <div class="social-links">
-      <iconify-icon icon="fa6-brands:youtube" height="22px" />
-      <iconify-icon icon="fa6-brands:twitter" height="22px" />
-      <iconify-icon icon="fa6-brands:github" height="22px" />
+      <a href="https://youtube.com/@jNaimXIII">
+        <iconify-icon icon="fa6-brands:youtube" height="22px" />
+      </a>
+      <a href="https://twitter.com/jNaimXIII">
+        <iconify-icon icon="fa6-brands:twitter" height="22px" />
+      </a>
+      <a href="https://github.com/jNaimXIII">
+        <iconify-icon icon="fa6-brands:github" height="22px" />
+      </a>
     </div>
   </div>
 </div>
@@ -51,6 +53,10 @@
       .social-links {
         display: flex;
         gap: 8px;
+
+        a {
+          color: $primary-font-color;
+        }
       }
     }
   }
