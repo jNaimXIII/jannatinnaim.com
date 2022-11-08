@@ -7,6 +7,10 @@
   import Discovery from "./_Discovery.svelte";
 </script>
 
+<svelte:head>
+  <title>Jannatin Naim</title>
+</svelte:head>
+
 <Menu />
 <Dock />
 
