@@ -1,10 +1,14 @@
 <script lang="ts">
+  import type { PageData } from "./$types";
+
   import Menu from "./_Menu.svelte";
   import Dock from "./_Dock.svelte";
 
   import Home from "./_Home.svelte";
   import About from "./_About.svelte";
   import Discovery from "./_Discovery.svelte";
+
+  export let data: PageData;
 </script>
 
 <svelte:head>
@@ -16,7 +20,7 @@
 
 <main>
   <Home />
-  <About />
+  <About animeCount={data.anime.count} />
   <Discovery />
 </main>
 

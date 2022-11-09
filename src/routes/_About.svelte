@@ -1,3 +1,7 @@
+<script lang="ts">
+  export let animeCount: number;
+</script>
+
 <section class="about" id="about">
   <h2>Who am I?</h2>
 
@@ -8,7 +12,10 @@
 
     <p>
       I make content on YouTube and post semi-decent stuff on Twitter. Highly active in online communities so, maybe
-      we'll meet there someday.
+      we'll meet there someday. As of now, I've watched
+      <a href="https://myanimelist.net/animelist/jNaimXIII" target="_blank" rel="noreferrer">
+        {animeCount} anime.
+      </a>
     </p>
 
     <p>For now, just keep scrolling.</p>
@@ -50,6 +57,10 @@
 
       font-size: 18px;
       line-height: 1.5em;
+
+      a {
+        color: $primary-font-color;
+      }
     }
 
     img {
