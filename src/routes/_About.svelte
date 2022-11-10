@@ -1,5 +1,8 @@
 <script lang="ts">
-  export let animeCount: number;
+  import type { SocialData } from "$lib/data/content/socials";
+  import "$lib/styles/home/section.scss";
+
+  export let socialData: SocialData;
 </script>
 
 <section class="about" id="about">
@@ -14,7 +17,7 @@
       I make content on YouTube and post semi-decent stuff on Twitter. Highly active in online communities so, maybe
       we'll meet there someday. As of now, I've watched
       <a href="https://myanimelist.net/animelist/jNaimXIII" target="_blank" rel="noreferrer">
-        {animeCount} anime.
+        {socialData.MyAnimeList?.animeCount} anime.
       </a>
     </p>
 

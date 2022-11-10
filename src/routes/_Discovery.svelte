@@ -1,4 +1,5 @@
 <script lang="ts">
+  import "$lib/styles/home/section.scss";
   import discoveryContent from "$lib/data/content/discovery.json";
 </script>
 
@@ -19,7 +20,10 @@
 
 <style lang="scss">
   section {
-    padding: 72px 96px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 96px;
   }
 
   h2,

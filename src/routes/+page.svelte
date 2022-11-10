@@ -7,6 +7,7 @@
   import Home from "./_Home.svelte";
   import About from "./_About.svelte";
   import Discovery from "./_Discovery.svelte";
+  import Socials from "./_Socials.svelte";
 
   export let data: PageData;
 </script>
@@ -20,8 +21,9 @@
 
 <main>
   <Home />
-  <About animeCount={data.anime.count} />
+  <About socialData={data.socialData} />
   <Discovery />
+  <Socials socialsData={data.socialData} />
 </main>
 
 <style lang="scss">

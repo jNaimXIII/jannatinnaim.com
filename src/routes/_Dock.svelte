@@ -13,6 +13,9 @@
       <a href="#discovery">
         <iconify-icon icon="akar-icons:search" height="36px" />
       </a>
+      <a href="#socials">
+        <iconify-icon icon="akar-icons:rock-on" height="36px" />
+      </a>
     </nav>
   </div>
 </div>
