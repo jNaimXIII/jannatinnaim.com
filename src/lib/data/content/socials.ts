@@ -32,13 +32,3 @@ export interface SocialData {
     animeCount?: number;
   };
 }
-
-export const components = new Map<SocialSection, string>([
-  ["YouTube", "./_SocialSectionYouTube.svelte"],
-  ["Twitter", "./_SocialSectionTwitter.svelte"],
-  ["GitHub", "./_SocialSectionGitHub.svelte"],
-  ["Discord", "./_SocialSectionDiscord.svelte"],
-  ["Facebook", "./_SocialSectionFacebook.svelte"],
-  ["LinkedIn", "./_SocialSectionLinkedIn.svelte"],
-  ["MyAnimeList", "./_SocialSectionMyAnimeList.svelte"],
-]);

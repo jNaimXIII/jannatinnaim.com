@@ -1,6 +1,6 @@
 <script lang="ts">
   import "$lib/styles/home/section.scss";
-  import { socialSections, type SocialSection, components, type SocialData } from "$lib/data/content/socials";
+  import { socialSections, type SocialSection, type SocialData } from "$lib/data/content/socials";
   import { fly } from "svelte/transition";
   import { backIn, backInOut } from "svelte/easing";
 
@@ -9,8 +9,7 @@
   let selectedSection: SocialSection = socialSections[0];
 
   const getSectionComponent = () => {
-    const componentPath = components.get(selectedSection);
-    if (componentPath) return import(componentPath).then((component) => component.default);
+    return import(`./_SocialSection${selectedSection}.svelte`).then((component) => component.default);
   };
 </script>
 
