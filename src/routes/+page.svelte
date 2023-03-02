@@ -42,12 +42,12 @@
 	<title>Jannatin Naim</title>
 </svelte:head>
 
-<section class="flex flex-col items-center justify-center min-h-screen">
-	<h1 class="text-6xl">Jannatin Naim</h1>
-	<p class="mb-8">Heyo! How's it going?</p>
+<section class="flex min-h-screen flex-col items-center justify-center">
+	<h1 class="text-center text-6xl">Jannatin Naim</h1>
+	<p class="mb-8 text-center">Heyo! How's it going?</p>
 
 	<nav>
-		<ul class="flex gap-4">
+		<ul class="flex flex-wrap items-center justify-center gap-4">
 			{#each socialLinks as socialLink}
 				<li class="w-6">
 					<a
