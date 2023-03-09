@@ -56,7 +56,11 @@
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						<img src="socials/{socialLink.icon}.svg" alt={socialLink.label} />
+						<img
+							class="invert dark:invert-0"
+							src="socials/{socialLink.icon}.svg"
+							alt={socialLink.label}
+						/>
 					</a>
 				</li>
 			{/each}
