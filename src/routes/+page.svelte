@@ -1,6 +1,11 @@
 <script lang="ts">
 	const socialLinks = [
 		{
+			label: 'Email',
+			href: 'mailto:soup@jannatinnaim.com',
+			icon: 'email'
+		},
+		{
 			label: 'GitHub',
 			href: 'https://github.com/jNaimXIII',
 			icon: 'github'
