@@ -39,6 +39,11 @@
 			label: 'Spotify',
 			href: 'https://open.spotify.com/user/31mgij355hfrhnxov6d777p4n2ya?si=b50e4916e9824e9d',
 			icon: 'spotify'
+		},
+		{
+			label: 'Phone',
+			href: 'tel:8801756981418',
+			icon: 'phone'
 		}
 	];
 </script>
