@@ -52,7 +52,13 @@
 	<title>Jannatin Naim</title>
 </svelte:head>
 
-<section class="flex min-h-screen flex-col items-center justify-center">
+<section class="flex min-h-screen flex-col items-center justify-center p-8">
+	<img
+		src="profile/profile.jpeg"
+		alt="Profile"
+		class="mb-8 w-full max-w-xs rounded-full grayscale filter"
+	/>
+
 	<h1 class="text-center text-6xl">Jannatin Naim</h1>
 	<p class="mb-8 text-center">Heyo! How's it going?</p>
 
