@@ -6,6 +6,11 @@
 			icon: 'email'
 		},
 		{
+			label: 'Blog',
+			href: 'https://blog.jannatinnaim.com',
+			icon: 'blog'
+		},
+		{
 			label: 'GitHub',
 			href: 'https://github.com/jNaimXIII',
 			icon: 'github'
