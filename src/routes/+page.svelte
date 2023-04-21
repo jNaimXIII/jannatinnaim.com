@@ -46,6 +46,11 @@
 			icon: 'spotify'
 		},
 		{
+			label: 'Telegram',
+			href: 'https://t.me/jNaimXIII',
+			icon: 'telegram'
+		},
+		{
 			label: 'Phone',
 			href: 'tel:8801756981418',
 			icon: 'phone'
