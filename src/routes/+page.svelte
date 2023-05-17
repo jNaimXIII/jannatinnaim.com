@@ -45,11 +45,11 @@
 			href: 'https://open.spotify.com/user/31mgij355hfrhnxov6d777p4n2ya?si=b50e4916e9824e9d',
 			icon: 'spotify'
 		},
-		{
-			label: 'Telegram',
-			href: 'https://t.me/jNaimXIII',
-			icon: 'telegram'
-		},
+		// {
+		// 	label: 'Telegram',
+		// 	href: 'https://t.me/jNaimXIII',
+		// 	icon: 'telegram'
+		// },
 		{
 			label: 'Phone',
 			href: 'tel:8801756981418',
@@ -63,11 +63,11 @@
 </svelte:head>
 
 <section class="flex min-h-screen flex-col items-center justify-center p-8">
-	<!-- <img -->
-	<!-- 	src="profile/profile.jpeg" -->
-	<!-- 	alt="Profile" -->
-	<!-- 	class="mb-8 w-full max-w-xs rounded-full grayscale filter" -->
-	<!-- /> -->
+	<img
+		src="profile/profile.jpeg"
+		alt="Profile"
+		class="mb-8 w-full max-w-xs rounded-full grayscale filter"
+	/>
 
 	<h1 class="text-center text-6xl">Jannatin Naim</h1>
 	<p class="mb-8 text-center">Heyo! How's it going?</p>
