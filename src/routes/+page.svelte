@@ -56,6 +56,19 @@
 			icon: 'phone'
 		}
 	];
+
+	const validProfilePhotos  = ["profile.jpeg", "1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"] as const;
+	type ValidProfilePhoto = typeof validProfilePhotos[number];
+
+	let profilePhoto: ValidProfilePhoto = "5.jpg"
+	const isProfilePhotoGrayscale = false;
+
+	// // Profile photo slideshow
+	// let currentProfilePhotoIndex = validProfilePhotos.indexOf(profilePhoto);
+	// setInterval(() => {
+	// 	currentProfilePhotoIndex = (currentProfilePhotoIndex + 1) % validProfilePhotos.length;
+	// 	profilePhoto = validProfilePhotos[currentProfilePhotoIndex];
+	// }, 1000 * 4.2)
 </script>
 
 <svelte:head>
@@ -64,9 +77,9 @@
 
 <section class="flex min-h-screen flex-col items-center justify-center p-8">
 	<img
-		src="profile/profile.jpeg"
+		src="profile/{profilePhoto}"
 		alt="Profile"
-		class="mb-8 w-full max-w-xs rounded-full grayscale filter"
+		class="mb-8 w-full max-w-xs rounded-full filter {isProfilePhotoGrayscale ? "grayscale" : ""}"
 	/>
 
 	<h1 class="text-center text-6xl">Jannatin Naim</h1>
