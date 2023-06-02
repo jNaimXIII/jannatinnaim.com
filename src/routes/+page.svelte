@@ -57,18 +57,21 @@
 		}
 	];
 
-	const validProfilePhotos  = ["profile.jpeg", "1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"] as const;
-	type ValidProfilePhoto = typeof validProfilePhotos[number];
+	const validProfilePhotos = ['profile.jpeg', '1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg'] as const;
+	type ValidProfilePhoto = (typeof validProfilePhotos)[number];
 
-	let profilePhoto: ValidProfilePhoto = "5.jpg"
+	// let profilePhoto: ValidProfilePhoto = '5.jpg';
 	const isProfilePhotoGrayscale = false;
+
+	// Random profile photo
+	let profilePhoto = validProfilePhotos[Math.floor(Math.random() * validProfilePhotos.length)];
 
 	// // Profile photo slideshow
 	// let currentProfilePhotoIndex = validProfilePhotos.indexOf(profilePhoto);
 	// setInterval(() => {
 	// 	currentProfilePhotoIndex = (currentProfilePhotoIndex + 1) % validProfilePhotos.length;
 	// 	profilePhoto = validProfilePhotos[currentProfilePhotoIndex];
-	// }, 1000 * 4.2)
+	// }, 1000 * 4.2);
 </script>
 
 <svelte:head>
@@ -79,7 +82,7 @@
 	<img
 		src="profile/{profilePhoto}"
 		alt="Profile"
-		class="mb-8 w-full max-w-xs rounded-full filter {isProfilePhotoGrayscale ? "grayscale" : ""}"
+		class="mb-8 w-full max-w-xs rounded-full filter {isProfilePhotoGrayscale ? 'grayscale' : ''}"
 	/>
 
 	<h1 class="text-center text-6xl">Jannatin Naim</h1>
