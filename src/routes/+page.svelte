@@ -60,11 +60,11 @@
 	const validProfilePhotos = ['profile.jpeg', '1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg'] as const;
 	type ValidProfilePhoto = (typeof validProfilePhotos)[number];
 
-	// let profilePhoto: ValidProfilePhoto = '5.jpg';
-	const isProfilePhotoGrayscale = false;
+	let profilePhoto: ValidProfilePhoto = '2.jpg';
+	const isProfilePhotoGrayscale = true;
 
-	// Random profile photo
-	let profilePhoto = validProfilePhotos[Math.floor(Math.random() * validProfilePhotos.length)];
+	// // Random profile photo
+	// let profilePhoto = validProfilePhotos[Math.floor(Math.random() * validProfilePhotos.length)];
 
 	// // Profile photo slideshow
 	// let currentProfilePhotoIndex = validProfilePhotos.indexOf(profilePhoto);
