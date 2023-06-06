@@ -79,11 +79,11 @@
 </svelte:head>
 
 <section class="flex min-h-screen flex-col items-center justify-center p-8">
-	<img
-		src="profile/{profilePhoto}"
-		alt="Profile"
-		class="mb-8 w-full max-w-xs rounded-full filter {isProfilePhotoGrayscale ? 'grayscale' : ''}"
-	/>
+	<!-- <img -->
+	<!-- 	src="profile/{profilePhoto}" -->
+	<!-- 	alt="Profile" -->
+	<!-- 	class="mb-8 w-full max-w-xs rounded-full filter {isProfilePhotoGrayscale ? 'grayscale' : ''}" -->
+	<!-- /> -->
 
 	<h1 class="text-center text-6xl">Jannatin Naim</h1>
 	<p class="mb-8 text-center">Heyo! How's it going?</p>
