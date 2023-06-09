@@ -111,12 +111,14 @@
 </section>
 
 <style>
-	:global(body) {
-		background: linear-gradient(231deg, #bcabae, #0f0f0f, #2d2e2e, #716969, #fbfbfb);
-		background-size: 1000% 1000%;
+	/* Gradient background
+		:global(body) {
+			background: linear-gradient(231deg, #bcabae, #0f0f0f, #2d2e2e, #716969, #fbfbfb);
+			background-size: 1000% 1000%;
 
-		animation: gradientAnimation 30s ease infinite;
-	}
+			animation: gradientAnimation 30s ease infinite;
+		}
+	*/
 
 	@keyframes gradientAnimation {
 		0% {
